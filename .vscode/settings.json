@@ -1,0 +1,7 @@
+{
+    "emmet.triggerExpansionOnTab": true,
+    "editor.defaultFormatter": "vscode.html-language-features",
+    "notebook.defaultFormatter": "vscode.html-language-features",
+    "emmet.useInlineCompletions": true,
+    "emmet.showSuggestionsAsSnippets": true
+}
