@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <h1>Mais sobre Formulários</h1>
+     <form action="/Formulários e Mídias/processa.html" method="GET">
+        <h2>Label</h2>
+        <label>
+            Nome:<br>
+            <input type="text" name="nome" id="nome"><br>
+        </label>
+        <label for="email">E-mail:</label><br>
+        <input type="text" name="teste" id="email"><br>
+
+        <h2>Mais elementos de formulário</h2>
+        Genero<br>
+        <label for="masculino">Masculino</label>
+        <input type="radio" name="genero" value="masculino" id="masculino"><br>
+        <label for="feminino">Feminino</label>
+        <input type="radio" name="genero" value="feminino" id="feminino"><br>
+        <label for="web">Web</label>
+        <input type="radio" name="tipo" value="web" id="web"><br>
+        <label for="app">App</label>
+        <input type="radio" name="tipo" value="app" id="app"><br>
+        <br><br> 
+        <label for="rock">Rock</label>
+        <input type ="checkbox" name="estilo" value="rock" id="rock"><br>
+        <label for="rap">Rap</label>
+        <input type ="checkbox" name="estilo" value="rap" id="rap"><br>
+        <label for="jazz">Jazz</label>
+        <input type ="checkbox" name="estilo" value="jazz" id="       jazz"><br>
+        <br><br>           
+        <input type="radio" name="genero" value="masculino"> Masculino<br>
+        <input type="radio" name="genero" value="feminino"> Feminino<br>
+        <input type="radio" name="tipo" value="masculino"> web<br>
+        <input type="radio" name="tipo" value="feminino"> app<br>
+        <br><br>
+        <input type ="checkbox" name="estilo" value="rock"> Rock<br>
+        <input type ="checkbox" name="estilo" value="rap"> Rap<br>
+        <input type ="checkbox" name="estilo" value="jazz"> Jazz<br>
+        <br><br>
+        Estado:
+        <select name="estado">
+            <option value="">Selecione</option>
+            <option value="SP">São Paulo</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="MG">Minas Gerais</option>
+
+        <br><br>
+
+            <input type="file" name ="arquivo"><br>
+
+        <br><br>
+        <input type="submit" value="cadastrar">
+
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <label>
+                <input type="text" name="nome" id="nome"><br>
+                Nome:<br>
+            </label>
+            <label>
+                E-mail:<br>
+                <input type="text" name="teste" id="email"><br>
+            </label>
+        </fieldset>
+
+     </form>
+
+
+    
+    
+</body>
+</html>
