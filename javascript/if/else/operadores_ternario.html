@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+           
+            var nota = prompt('Digite o sua nota:');
+            var media = 7;
+            var faltas_maxima = 15;
+            var faltas = prompt('Digite o numero maximo de faltas');
+
+            if(nota >= media && faltas <= faltas_maxima){
+                alert('Aluno passou');
+            }else{
+                alert('Aluno reprovado!!');
+
+            }
+
+            var resultado = (nota >= media && faltas <= faltas_maxima) ? 'Aprovado' : 'Reprovado';
+
+        document.write(resultado);
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
