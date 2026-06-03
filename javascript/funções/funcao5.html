@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções Anônimas e Callback</title>
+
+    <script>
+        // 1. Captura a string do usuário e já converte para um Booleano real
+        var entradaUsuario = prompt('Digite true ou false');
+        var id = (entradaUsuario === 'true'); // Se o usuário digitar 'true', id vira o booleano true. Qualquer outra coisa vira false.
+
+        // 2. Definição da função que recebe os callbacks
+        function exibirArtigo(id, callbackSucesso, callbackErro){
+            if(id === true){
+                callbackSucesso('Funções de callback em JS', 'Funções de callback executadas com sucesso!');
+            } else {
+                callbackErro('Erro ao recuperar os dados.');
+            }
+        }
+
+        // 3. Funções anônimas atribuídas a variáveis (Callbacks)
+        var callbackSucesso = function(titulo, descricao){
+            document.write('<h1>' + titulo + '</h1>');
+            document.write('<hr />');
+            document.write('<p>' + descricao + '</p>'); // Mudado para <p> para diferenciar do título
+        }
+
+        var callbackErro = function(erro){
+            document.write('<h1 style="color: red;">' + erro + '</h1>');
+        }
+    
+        // 4. Chamada da função passando a variável 'id' correta
+        exibirArtigo(id, callbackSucesso, callbackErro);
+
+    </script>
+</head>
+<body></body>
+</html>

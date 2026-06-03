@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data2</title>
+
+    <script>
+        
+        var num1 = prompt('Insira o primeiro numero')
+        var num2 = prompt('Insira o segundo numero')
+        var operacao = prompt('Insira soma ou subtracao')
+
+        num1 = parseFloat(num1)
+        num2 = parseFloat(num2)
+
+        function calcular(num1, num2, operacao){
+            if(operacao === 'soma'){
+                return num1 + num2
+            }else if(operacao === 'subtracao'){
+                return num1 - num2
+            }else {
+                return 'Operação inválida!'; // Tratamento caso o usuário digite errado
+            }
+        }
+        var resultado = calcular(num1, num2, operacao);
+        document.write('O resultado é: ' + resultado);
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body></body>
+</html>
