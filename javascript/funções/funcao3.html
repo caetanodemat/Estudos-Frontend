@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+      //3 escopos de variaveis: global, local e de bloco
+      //variavel global: declarada fora de qualquer bloco
+      //variavel local: declarada dentro de um bloco
+      //variavel de bloco: declarada dentro de um bloco
+      //variavel de bloco: declarada dentro de um bloco
+      var serie = 'Friends'//variavel global
+      if (true){//bloco
+        var serie2 = 'The Office'//operador var dentro de um bloco cria uma variavel global sofrendo uma elevação de variavel
+        document.write(serie)
+      }
+      document.write('<br />')
+      document.write(serie2)
+      document.write('<br />')
+
+      function x(){//escopo funcao
+        document.write(serie)
+        document.write('<br />')
+        document.write(serie2)
+        document.write('<br />')
+        var serie3 = 'the witcher'//variaveis criadas dentro de funções nao se elevam, por isso não são chamadas
+      }
+    x()
+    document.write(serie3)
+    </script>
+</head>
+<body></body>
+</html>

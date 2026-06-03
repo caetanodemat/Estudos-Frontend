@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+       /* function calcularAreaTerreno(largura, comprimento){
+            var area = largura * comprimento
+            return area
+        }
+        var largura = prompt('Digite a largura do terreno')
+        var comprimento = prompt('Digite o comprimento do terreno')
+        largura = parseFloat(largura)
+        comprimento = parseFloat(comprimento)
+        var area = calcularAreaTerreno(largura, comprimento)
+        document.write('A área do terreno é: ' + area + ' metros quadrados')*/
+
+        function soma(a, b, c){
+            b = b === undefined ? 0 : b//define o valor de b como 0 se nao for definido
+            c = c === undefined ? 0 : c//define o valor de c como 0 se nao for definido
+            return a + b + c
+        }
+        console.log(soma(7, 7, 9))
+        console.log(soma(7, 7, 9, 9))//desconsiderando os parametros extras
+        console.log(soma(7, 7))//a variavel faltante sera considerada como undefined
+        console.log(soma())//a variavel faltante sera considerada como undefined
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
