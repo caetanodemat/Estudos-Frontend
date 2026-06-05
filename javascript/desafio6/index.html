@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 6</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .container {
+            border: 2px solid #333;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #333;
+        }
+        .input-section {
+            margin-bottom: 20px;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        .button-section {
+            display: flex;
+            gap: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            flex: 1;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #btnOrdenar {
+            background-color: #2196F3;
+        }
+        #btnOrdenar:hover {
+            background-color: #0b7dda;
+        }
+        .lista-section {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .lista-section h3 {
+            margin-top: 0;
+        }
+        ul {
+            list-style-position: inside;
+        }
+        li {
+            padding: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gerenciador de Objetos</h1>
+        
+        <div class="input-section">
+            <input type="text" id="input" placeholder="Digite um objeto...">
+        </div>
+        
+        <div class="button-section">
+            <button id="btnAdicionar">Adicionar</button>
+            <button id="btnOrdenar">Ordenar</button>
+        </div>
+        
+        <div class="lista-section">
+            <h3>Lista de Objetos:</h3>
+            <ul id="lista"></ul>
+        </div>
+    </div>
+
+    <script>
+        // Array inicial com os objetos
+        var objetos = Array('Cadeira', 'Impressora', 'Garfo');
+
+        // Função para atualizar a visualização da lista na página
+        function atualizarLista() {
+            var lista = document.getElementById('lista');
+            lista.innerHTML = ''; // Limpar lista anterior
+            
+            for (var i = 0; i < objetos.length; i++) {
+                var li = document.createElement('li');
+                li.textContent = objetos[i];
+                lista.appendChild(li);
+            }
+        }
+
+        // Função para adicionar um objeto ao array
+        function adicionar() {
+            var input = document.getElementById('input');
+            var valor = input.value.trim(); // Recupera o valor e remove espaços em branco
+            
+            // Verifica se está vazio
+            if (valor === '') {
+                alert('Informe um valor válido');
+                return;
+            }
+            
+            // Verifica se já existe no array
+            if (objetos.indexOf(valor) !== -1) {
+                alert('Objeto já foi adicionado');
+                return;
+            }
+            
+            // Adiciona ao array
+            objetos.push(valor);
+            
+            // Log para debug
+            console.log('Array atualizado:', objetos);
+            
+            // Limpa o input
+            input.value = '';
+            
+            // Atualiza a visualização
+            atualizarLista();
+        }
+
+        // Função para ordenar o array
+        function ordenar() {
+            // Ordena alfabeticamente comparando de forma case-insensitive
+            objetos.sort(function(a, b) {
+                return a.toLowerCase().localeCompare(b.toLowerCase());
+            });
+            
+            // Log para debug
+            console.log('Array ordenado:', objetos);
+            
+            // Atualiza a visualização
+            atualizarLista();
+        }
+
+        // Event listeners dos botões
+        document.getElementById('btnAdicionar').addEventListener('click', adicionar);
+        document.getElementById('btnOrdenar').addEventListener('click', ordenar);
+
+        // Atualiza a lista na primeira carga da página
+        atualizarLista();
+    </script>
+</body>
+</html>
