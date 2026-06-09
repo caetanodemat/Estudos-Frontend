@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var video = Array()
+
+        video[1] = Array()
+        video[1]['nome'] = 'Fullmetal Alchemist'
+        video[1]['categoria'] = 'Anime'
+        function getVideo(video) {
+            try{
+
+                console.log(video[0]['nome'])
+            } catch(e){//o parametro e é o algo que definimos para identificar o erro exemplo abaixo
+                tratarErro(e)
+                console.log('Erro tratado')
+
+            }
+            finally{
+                console.log('Sempre passa por aqui')
+            }
+            console.log('A aplicacao nao morreu')
+        }
+        function tratarErro(e){
+            console.log(e)
+        }
+
+    
+        getVideo(video)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
