@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var i = 5
+
+       //setTimeout(function() {document.write('teste' + '<br />')}, 2000)//impreme uma unica vez apos a abertura do arquivo
+        setInterval(function() {document.write(i + '<br />')
+            i--
+            if(i === 0){
+                window.location.reload()
+            }
+        }, 1000)//imprime continuamente rodando no periodo pre-setado
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
