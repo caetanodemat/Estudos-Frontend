@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //utilizando var, quando ele estiver em um escopo que nao seja uma function ele sobreescreve a 
+        //var no escopo global, para evitar isso utilizamos let
+        var serie = 'Drake e Josh'
+
+        {
+            var serie = 'Friends'
+            console.log('dentro do bloco' + serie)
+        }
+        console.log('Fora do bloco' + serie)
+
+        let serie1 = 'Game of thrones'
+
+        {
+            let serie1 = 'How i met your mother'
+            console.log('dentro do bloco' + serie1)
+        }
+        console.log('Fora do bloco' + serie1)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

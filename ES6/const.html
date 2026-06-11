@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //para constantes constumace utilizar
+        const SERIE = 'Friends'
+       // SERIE = 'Two and a half man' se tentar atribuir um outro valor a constante ira gerar um erro
+       //caso a constante estiver dentro de uma function ela ira se comportar igual uma var e nao ira gerar erro
+
+       function x() {
+        const SERIE = 'The Walking Dead'
+        console.log('Escopo da funcao:' + SERIE)
+       }
+       x()
+
+        console.log('Escopo Global:' + SERIE)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
